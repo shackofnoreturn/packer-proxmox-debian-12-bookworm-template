@@ -1,5 +1,6 @@
 variable "iso_file" {
   type    = string
+  default = ""
 }
 
 variable "iso_url" {
@@ -9,7 +10,7 @@ variable "iso_url" {
 
 variable "iso_storage_pool" {
   type    = string
-  default = "local:iso"
+  default = ""
 }
 
 variable "iso_checksum" {
@@ -17,9 +18,15 @@ variable "iso_checksum" {
   default = "sha512:224cd98011b9184e49f858a46096c6ff4894adff8945ce89b194541afdfd93b73b4666b0705234bd4dff42c0a914fdb6037dd0982efb5813e8a553d8e92e6f51"
 }
 
+variable "vm_name" {
+  type = string
+  default = "pckr-tmpl-debian-12"
+}
+
 variable "vmid" {
   type = string
   description = "Proxmox Template ID"
+  default = "9999"
 }
 
 variable "cpu_type" {
@@ -44,6 +51,7 @@ variable "disk_size" {
 
 variable "storage_pool" {
   type    = string
+  default = ""
 }
 
 variable "memory" {
@@ -64,7 +72,7 @@ variable "proxmox_api_password" {
 
 variable "proxmox_api_user" {
   type    = string
-  default = ""
+  default = "root@pam"
 }
 
 variable "proxmox_host" {

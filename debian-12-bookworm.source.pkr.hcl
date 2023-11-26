@@ -5,8 +5,8 @@ source "proxmox-iso" "debian-12" {
   insecure_skip_tls_verify = true
   node                     = var.proxmox_node
 
-  vm_name                 = "pckr-tmpl-debian-12"
-  template_description    = "Debian 12 Bookworm Packer Template -- Created: ${formatdate("YYYY-MM-DD hh:mm:ss ZZZ", timestamp())}"
+  vm_name                 = var.vm_name
+  template_description    = "Debian 12 Bullseye Packer Template -- Created: ${formatdate("YYYY-MM-DD hh:mm:ss ZZZ", timestamp())}"
   vm_id                   = var.vmid
   os                      = "l26"
   cpu_type                = var.cpu_type
