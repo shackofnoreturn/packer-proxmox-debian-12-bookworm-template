@@ -18,6 +18,11 @@ variable "iso_checksum" {
   default = "sha512:224cd98011b9184e49f858a46096c6ff4894adff8945ce89b194541afdfd93b73b4666b0705234bd4dff42c0a914fdb6037dd0982efb5813e8a553d8e92e6f51"
 }
 
+variable "vm_name" {
+  type = string
+  default = "pckr-tmpl-debian-12"
+}
+
 variable "vmid" {
   type = string
   description = "Proxmox Template ID"

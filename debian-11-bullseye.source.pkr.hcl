@@ -5,7 +5,7 @@ source "proxmox-iso" "debian-12" {
   insecure_skip_tls_verify = true
   node                     = var.proxmox_node
 
-  vm_name                 = "pckr-tmpl-debian-12"
+  vm_name                 = var.vm_name
   template_description    = "Debian 12 Bullseye Packer Template -- Created: ${formatdate("YYYY-MM-DD hh:mm:ss ZZZ", timestamp())}"
   vm_id                   = var.vmid
   os                      = "l26"
@@ -35,7 +35,6 @@ source "proxmox-iso" "debian-12" {
   }
 
   iso_file       = var.iso_file
-  #iso_url          = var.iso_url
   iso_storage_pool = var.iso_storage_pool
   #iso_checksum     = var.iso_checksum
   unmount_iso      = true
