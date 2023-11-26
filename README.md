@@ -31,7 +31,7 @@ Navigate to the project directory and execute the following command:
 
 ```sh
 packer init
-packer build -var-file vars/debian_12.pkrvars.hcl -var "proxmox_host=10.0.0.10:8006" "proxmox_api_user=root@pam" "proxmox_api_password=Ackou1736jens" .
+packer build -var-file vars/debian_12.pkrvars.hcl -var "proxmox_api_password=YOUR_PROXMOX_PASSWORD" .
 ```
 
 ### 3. Deploy a VM from a Template

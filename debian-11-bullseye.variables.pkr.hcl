@@ -1,5 +1,6 @@
 variable "iso_file" {
   type    = string
+  default = ""
 }
 
 variable "iso_url" {
@@ -9,6 +10,7 @@ variable "iso_url" {
 
 variable "iso_storage_pool" {
   type    = string
+  default = ""
 }
 
 variable "iso_checksum" {
@@ -19,6 +21,7 @@ variable "iso_checksum" {
 variable "vmid" {
   type = string
   description = "Proxmox Template ID"
+  default = "9999"
 }
 
 variable "cpu_type" {
@@ -43,6 +46,7 @@ variable "disk_size" {
 
 variable "storage_pool" {
   type    = string
+  default = ""
 }
 
 variable "memory" {
@@ -63,7 +67,7 @@ variable "proxmox_api_password" {
 
 variable "proxmox_api_user" {
   type    = string
-  default = ""
+  default = "root@pam"
 }
 
 variable "proxmox_host" {
