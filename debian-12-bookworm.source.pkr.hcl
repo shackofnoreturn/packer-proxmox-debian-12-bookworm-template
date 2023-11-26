@@ -6,7 +6,7 @@ source "proxmox-iso" "debian-12" {
   node                     = var.proxmox_node
 
   vm_name                 = "pckr-tmpl-debian-12"
-  template_description    = "Debian 12 Bullseye Packer Template -- Created: ${formatdate("YYYY-MM-DD hh:mm:ss ZZZ", timestamp())}"
+  template_description    = "Debian 12 Bookworm Packer Template -- Created: ${formatdate("YYYY-MM-DD hh:mm:ss ZZZ", timestamp())}"
   vm_id                   = var.vmid
   os                      = "l26"
   cpu_type                = var.cpu_type
@@ -35,7 +35,6 @@ source "proxmox-iso" "debian-12" {
   }
 
   iso_file       = var.iso_file
-  #iso_url          = var.iso_url
   iso_storage_pool = var.iso_storage_pool
   #iso_checksum     = var.iso_checksum
   unmount_iso      = true

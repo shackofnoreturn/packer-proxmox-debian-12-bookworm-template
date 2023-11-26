@@ -30,8 +30,8 @@ Templates are created by converting an existing VM to a template.
 Navigate to the project directory and execute the following command:
 
 ```sh
-packer init
-packer build -var-file vars/debian_12.pkrvars.hcl -var "proxmox_host=10.0.0.10:8006" -var "proxmox_api_user=root@pam" -var "proxmox_api_password=PASSWORD_HERE" .
+packer init .
+packer build -var-file vars/debian_12.pkrvars.hcl -var "proxmox_api_password=PASSWORD_HERE" .
 ```
 
 ### 3. Deploy a VM from a Template
@@ -42,10 +42,10 @@ Right-click the template in Proxmox VE, and select "Clone".
 
 
 ### 4. Connect with cloned VM over SSH
-(*Change the IP with your VM's IP*)
+(*Change the IP with your new VM's IP*)
 
 ```sh
-ssh debian@10.0.0.226
+ssh shackadmin@10.0.0.226
 ```
 
 The certificate should do and no further passwords are needed.

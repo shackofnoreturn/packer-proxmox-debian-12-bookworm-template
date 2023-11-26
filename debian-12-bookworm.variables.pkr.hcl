@@ -9,6 +9,7 @@ variable "iso_url" {
 
 variable "iso_storage_pool" {
   type    = string
+  default = "local:iso"
 }
 
 variable "iso_checksum" {
